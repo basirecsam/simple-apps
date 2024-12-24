@@ -8,6 +8,7 @@ require('dotenv').config();
 const logger = require('./middleware/logger')
 app.use(logger)
 const connection = require('./middleware/db_connect');
+app.disable("x-poweres-by");
 
 // Dashboard
 app.use('/', express.static(path.join(__dirname, 'public')));
