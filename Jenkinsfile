@@ -44,7 +44,7 @@ pipeline {
             steps {
                 sh'''
                 cd apps
-                sed -1
+                sed -i 's/localhost/db/g' .env
                 '''
             }
         }
